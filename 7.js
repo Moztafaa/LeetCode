@@ -11,34 +11,34 @@ var isValidSudoku = function (board) {
           !isValidCol(board, i, j) ||
           !isValidSquare(board, i, j)
         ) {
-          return false
+          return false;
         }
       }
     }
   }
-  return true
+  return true;
 
   function isValidRow(board, i, j) {
     for (let k = 0; k < board[i].length; k++) {
       if (k !== j && board[i][k] === board[i][j]) {
-        return false
+        return false;
       }
     }
-    return true
+    return true;
   }
 
   function isValidCol(board, i, j) {
     for (let k = 0; k < board.length; k++) {
       if (k !== i && board[k][j] === board[i][j]) {
-        return false
+        return false;
       }
     }
-    return true
+    return true;
   }
 
   function isValidSquare(board, i, j) {
-    let row = Math.floor(i / 3) * 3
-    let col = Math.floor(j / 3) * 3
+    let row = Math.floor(i / 3) * 3;
+    let col = Math.floor(j / 3) * 3;
     for (let k = 0; k < 3; k++) {
       for (let l = 0; l < 3; l++) {
         if (
@@ -46,13 +46,13 @@ var isValidSudoku = function (board) {
           col + l !== j &&
           board[row + k][col + l] === board[i][j]
         ) {
-          return false
+          return false;
         }
       }
     }
-    return true
+    return true;
   }
-}
+};
 
 let board = [
   ['5', '3', '.', '.', '7', '.', '.', '.', '.'],
@@ -64,6 +64,6 @@ let board = [
   ['.', '6', '.', '.', '.', '.', '2', '8', '.'],
   ['.', '.', '.', '4', '1', '9', '.', '.', '5'],
   ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
-]
+];
 
-console.log(isValidSudoku(board))
+console.log(isValidSudoku(board));
