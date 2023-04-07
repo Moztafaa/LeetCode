@@ -30,6 +30,8 @@ var longestConsecutive = function (nums) {
   return maxLen;
 };
 
+
+// this function Used only for testing
 function countingSort(arr) {
   let min = Math.min(...arr);
   let max = Math.max(...arr);
@@ -51,7 +53,7 @@ function countingSort(arr) {
   return arr;
 }
 
-let nums = [0];
+let nums = [0, 3, 7, 2, 5, 8, 4, 6, 0, 1];
 longestConsecutive(nums);
 
 /**
