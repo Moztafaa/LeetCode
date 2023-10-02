@@ -17,3 +17,4 @@ var containsDuplicate = function (nums) {
   // if (nums.length == numSet.size) return false
   // else return true
 }
+
