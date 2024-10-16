@@ -2,15 +2,14 @@ public class Solution
 {
     public bool ContainsNearbyDuplicate(int[] nums, int k)
     {
+        var dict = new Dictionary<int, int>();
         for (int i = 0; i < nums.Length; i++)
         {
-            for (int j = i + 1; j < nums.Length && j <= i + k; j++)
+            if (dict.ContainsKey(nums[i]) && i - dict[nums[i]] <= k)
             {
-                if (nums[i] == nums[j])
-                {
-                    return true;
-                }
+                return true;
             }
+            dict[nums[i]] = i;
         }
         return false;
     }
