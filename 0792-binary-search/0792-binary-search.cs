@@ -4,7 +4,7 @@ public class Solution
     {
         int left = 0;
         int right = nums.Length - 1;
-        while (right >= left)
+        while (left <= right)
         {
             int mid = (right + left) / 2;
             if (target == nums[mid])
@@ -13,11 +13,11 @@ public class Solution
             }
             else if (target < nums[mid])
             {
-                right = mid;
+                right = mid -1;
             }
             else
             {
-                left = mid;
+                left = mid + 1;
             }
         }
 
