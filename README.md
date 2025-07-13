@@ -4,9 +4,14 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/Moztafaa/LeetCode/tree/master/0001-two-sum) |
 | [0792-binary-search](https://github.com/Moztafaa/LeetCode/tree/master/0792-binary-search) |
 ## Binary Search
 |  |
 | ------- |
 | [0792-binary-search](https://github.com/Moztafaa/LeetCode/tree/master/0792-binary-search) |
+## Hash Table
+|  |
+| ------- |
+| [0001-two-sum](https://github.com/Moztafaa/LeetCode/tree/master/0001-two-sum) |
 <!---LeetCode Topics End-->
