@@ -4,9 +4,6 @@ public class Solution
     public int EvalRPN(string[] tokens)
     {
         Stack<int> stack = new();
-        int result;
-        int first, second;
-        string operand;
         List<string> operands = ["+", "-", "*", "/"];
         foreach (var token in tokens)
         {
@@ -16,33 +13,22 @@ public class Solution
             }
             else
             {
-                if (token == "+")
+                int second = stack.Pop();
+                int first = stack.Pop();
+                switch (token)
                 {
-                    second = stack.Pop();
-                    first = stack.Pop();
-                    result = first + second;
-                    stack.Push(result);
-                }
-                else if (token == "-")
-                {
-                    second = stack.Pop();
-                    first = stack.Pop();
-                    result = first - second;
-                    stack.Push(result);
-                }
-                else if (token == "*")
-                {
-                    second = stack.Pop();
-                    first = stack.Pop();
-                    result = first * second;
-                    stack.Push(result);
-                }
-                else if (token == "/")
-                {
-                    second = stack.Pop();
-                    first = stack.Pop();
-                    result = first / second;
-                    stack.Push(result);
+                    case "+":
+                        stack.Push(first + second);
+                        break;
+                    case "-":
+                        stack.Push( first - second);
+                        break;
+                    case "*":
+                        stack.Push( first * second);
+                        break;
+                    case "/":
+                        stack.Push(first / second);
+                        break;
                 }
             }
         }
