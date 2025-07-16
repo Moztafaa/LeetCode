@@ -1,18 +1,54 @@
-public class Solution {
+public class Solution
+{
     public bool SearchMatrix(int[][] matrix, int target)
     {
-       
-        foreach (var t in matrix)
+        var ROWS = matrix.Length;
+        var COLS = matrix[0].Length;
+        var top = 0;
+        var bot = ROWS - 1;
+        var row = 0;
+
+        while (top <= bot)
         {
-            for (int n = 0; n < t.Length; n++)
+            row = (top + bot) / 2;
+            if (target > matrix[row][COLS -1])
             {
-                if (t[n] == target)
-                {
-                    return true;
-                }
+                top = row + 1;
+            }
+            else if (target < matrix[row][0])
+            {
+                bot = row - 1;
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        if (!(top <= bot))
+        {
+            return false;
+        }
+
+        int l = 0, r = COLS - 1;
+        while (l <= r)
+        {
+            int m = (l + r) / 2;
+            if (target > matrix[row][m])
+            {
+                l = m + 1;
+            }
+            else if (target < matrix[row][m])
+            {
+                r = m - 1;
+            }
+            else
+            {
+                return true;
             }
         }
 
         return false;
     }
 }
+
