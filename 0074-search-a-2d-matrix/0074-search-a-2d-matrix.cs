@@ -4,6 +4,7 @@ public class Solution
     {
         var ROWS = matrix.Length;
         var COLS = matrix[0].Length;
+
         var top = 0;
         var bot = ROWS - 1;
         var row = 0;
@@ -30,25 +31,7 @@ public class Solution
             return false;
         }
 
-        int l = 0, r = COLS - 1;
-        while (l <= r)
-        {
-            int m = (l + r) / 2;
-            if (target > matrix[row][m])
-            {
-                l = m + 1;
-            }
-            else if (target < matrix[row][m])
-            {
-                r = m - 1;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        return false;
+        return Array.BinarySearch(matrix[row], target) >= 0;
     }
 }
 
