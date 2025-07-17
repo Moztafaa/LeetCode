@@ -27,8 +27,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0150-evaluate-reverse-polish-notation](https://github.com/Moztafaa/LeetCode/tree/master/0150-evaluate-reverse-polish-notation) |
+| [0155-min-stack](https://github.com/Moztafaa/LeetCode/tree/master/0155-min-stack) |
 ## Matrix
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Moztafaa/LeetCode/tree/master/0074-search-a-2d-matrix) |
+## Design
+|  |
+| ------- |
+| [0155-min-stack](https://github.com/Moztafaa/LeetCode/tree/master/0155-min-stack) |
 <!---LeetCode Topics End-->
