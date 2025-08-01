@@ -72,4 +72,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0141-linked-list-cycle](https://github.com/Moztafaa/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0143-reorder-list](https://github.com/Moztafaa/LeetCode/tree/master/0143-reorder-list) |
+## Database
+|  |
+| ------- |
+| [0197-rising-temperature](https://github.com/Moztafaa/LeetCode/tree/master/0197-rising-temperature) |
 <!---LeetCode Topics End-->
